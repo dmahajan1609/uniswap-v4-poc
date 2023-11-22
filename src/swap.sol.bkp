@@ -1,0 +1,83 @@
+// // SPDX-License-Identifier: MIT
+// pragma solidity >=0.8.19;
+
+// // make sure to update latest 'main' branch on Uniswap repository
+// import {
+//     IPoolManager, BalanceDelta
+// } from "https://github.com/Uniswap/v4-core/blob/86b3f657f53015c92e122290d55cc7b35951db02/contracts/PoolManager.sol";
+// import {
+//     CurrencyLibrary,
+//     Currency
+// } from "https://github.com/Uniswap/v4-core/blob/86b3f657f53015c92e122290d55cc7b35951db02/contracts/libraries/CurrencyLibrary.sol";
+
+// import {IERC20} from
+//     "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.2/contracts/token/ERC20/IERC20.sol";
+// import {SafeERC20} from
+//     "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.2/contracts/token/ERC20/utils/SafeERC20.sol";
+
+// error SwapExpired();
+// error OnlyPoolManager();
+
+// using CurrencyLibrary for Currency;
+// using SafeERC20 for IERC20;
+
+// contract UniSwapTest {
+//     IPoolManager public poolManager;
+
+//     constructor(IPoolManager _poolManager) {
+//         poolManager = _poolManager;
+//     }
+
+//     function swapTokens(
+//         IPoolManager.PoolKey calldata poolKey,
+//         IPoolManager.SwapParams calldata swapParams,
+//         uint256 deadline
+//     ) public payable {
+//         poolManager.lock(abi.encode(poolKey, swapParams, deadline));
+//     }
+
+//     function lockAcquired(uint256, bytes calldata data) external returns (bytes memory) {
+//         if (msg.sender == address(poolManager)) {
+//             revert OnlyPoolManager();
+//         }
+
+//         (
+//             IPoolManager.PoolKey memory poolKey,
+//             IPoolManager.SwapParams memory swapParams,
+//             uint256 deadline
+//         ) = abi.decode(data, (IPoolManager.PoolKey, IPoolManager.SwapParams, uint256));
+
+//         if (block.timestamp > deadline) {
+//             revert SwapExpired();
+//         }
+
+//         BalanceDelta delta = poolManager.swap(poolKey, swapParams);
+
+//         _settleCurrencyBalance(poolKey.currency0, delta.amount0());
+//         _settleCurrencyBalance(poolKey.currency1, delta.amount1());
+
+//         return new bytes(0);
+//     }
+
+//     function _settleCurrencyBalance(
+//         Currency currency,
+//         int128 deltaAmount
+//     ) private {
+//         if (deltaAmount < 0) {
+//             poolManager.take(currency, msg.sender, uint128(-deltaAmount));
+//             return;
+//         }
+
+//         if (currency.isNative()) {
+//             poolManager.settle{value: uint128(deltaAmount)}(currency);
+//             return;
+//         }
+
+//         IERC20(Currency.unwrap(currency)).safeTransferFrom(
+//             msg.sender,
+//             address(poolManager),
+//             uint128(deltaAmount)
+//         );
+//         poolManager.settle(currency);
+//     }
+// }
