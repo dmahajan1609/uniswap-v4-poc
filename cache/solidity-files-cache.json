@@ -1,0 +1,4070 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "lib/abdk-libraries-solidity/ABDKMath64x64.sol": {
+      "lastModificationDate": 1700681118112,
+      "contentHash": "18553fed418e0bd7841bc4fa99522ded",
+      "sourceName": "lib/abdk-libraries-solidity/ABDKMath64x64.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ABDKMath64x64": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "ABDKMath64x64.sol/ABDKMath64x64.json"
+        }
+      }
+    },
+    "lib/forge-std/lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1700675501478,
+      "contentHash": "9febff9d09f18af5306669dc276c4c43",
+      "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Base.sol": {
+      "lastModificationDate": 1700675500859,
+      "contentHash": "ee13c050b1914464f1d3f90cde90204b",
+      "sourceName": "lib/forge-std/src/Base.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "CommonBase": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Base.sol/CommonBase.json"
+        },
+        "ScriptBase": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Base.sol/ScriptBase.json"
+        },
+        "TestBase": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Base.sol/TestBase.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Script.sol": {
+      "lastModificationDate": 1700675500859,
+      "contentHash": "ba325c778a7da8a21c2136aa32763c14",
+      "sourceName": "lib/forge-std/src/Script.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Script": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Script.sol/Script.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdAssertions.sol": {
+      "lastModificationDate": 1700675500859,
+      "contentHash": "6cc2858240bcd443debbbf075490e325",
+      "sourceName": "lib/forge-std/src/StdAssertions.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/StdMath.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdAssertions": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdAssertions.sol/StdAssertions.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdChains.sol": {
+      "lastModificationDate": 1700675500860,
+      "contentHash": "266a53b71b3a6b9c6c1d7e7763610cb8",
+      "sourceName": "lib/forge-std/src/StdChains.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdChains": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdChains.sol/StdChains.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdCheats.sol": {
+      "lastModificationDate": 1700675500860,
+      "contentHash": "7922ae0087a21ee3cdb97137be18c06c",
+      "sourceName": "lib/forge-std/src/StdCheats.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdCheats": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdCheats.sol/StdCheats.json"
+        },
+        "StdCheatsSafe": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdCheats.sol/StdCheatsSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdError.sol": {
+      "lastModificationDate": 1700675500861,
+      "contentHash": "64c896e1276a291776e5ea5aecb3870a",
+      "sourceName": "lib/forge-std/src/StdError.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdError": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdError.sol/stdError.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdInvariant.sol": {
+      "lastModificationDate": 1700675500861,
+      "contentHash": "0a580d6fac69e9d4b6504f747f3c0c24",
+      "sourceName": "lib/forge-std/src/StdInvariant.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdInvariant": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdInvariant.sol/StdInvariant.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdJson.sol": {
+      "lastModificationDate": 1700675500862,
+      "contentHash": "a341308627b7eeab7589534daad58186",
+      "sourceName": "lib/forge-std/src/StdJson.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "stdJson": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdJson.sol/stdJson.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdMath.sol": {
+      "lastModificationDate": 1700675500862,
+      "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
+      "sourceName": "lib/forge-std/src/StdMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdMath.sol/stdMath.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdStorage.sol": {
+      "lastModificationDate": 1700675500862,
+      "contentHash": "abd6f3379e6e2a7979b18abc21aea0c1",
+      "sourceName": "lib/forge-std/src/StdStorage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdStorage": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdStorage.sol/stdStorage.json"
+        },
+        "stdStorageSafe": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdStorage.sol/stdStorageSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdStyle.sol": {
+      "lastModificationDate": 1700675500862,
+      "contentHash": "6281165a12aa639705c691fccefd855e",
+      "sourceName": "lib/forge-std/src/StdStyle.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "StdStyle": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdStyle.sol/StdStyle.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdUtils.sol": {
+      "lastModificationDate": 1700675500862,
+      "contentHash": "2ace460f60242ec59c9310db966aee97",
+      "sourceName": "lib/forge-std/src/StdUtils.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdUtils": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StdUtils.sol/StdUtils.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1700675500863,
+      "contentHash": "15866901137b5670eabf31362523bd28",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Test.sol/Test.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Vm.sol": {
+      "lastModificationDate": 1700675500863,
+      "contentHash": "ee514d3fa7aec381fe95afceef628a18",
+      "sourceName": "lib/forge-std/src/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Vm.sol/Vm.json"
+        },
+        "VmSafe": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Vm.sol/VmSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1700675500864,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "lib/forge-std/src/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "console.sol/console.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1700675500866,
+      "contentHash": "491ca717c1915995e78cc361485a3067",
+      "sourceName": "lib/forge-std/src/console2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console2": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "console2.sol/console2.json"
+        }
+      }
+    },
+    "lib/forge-std/src/interfaces/IMulticall3.sol": {
+      "lastModificationDate": 1700675500868,
+      "contentHash": "7b131ca1ca32ef6378b7b9ad5488b901",
+      "sourceName": "lib/forge-std/src/interfaces/IMulticall3.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "IMulticall3": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IMulticall3.sol/IMulticall3.json"
+        }
+      }
+    },
+    "lib/forge-std/src/mocks/MockERC20.sol": {
+      "lastModificationDate": 1700675500869,
+      "contentHash": "9ec848e74c56e40afdd01ac0c873dc3b",
+      "sourceName": "lib/forge-std/src/mocks/MockERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "MockERC20": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "MockERC20.sol/MockERC20.json"
+        }
+      }
+    },
+    "lib/forge-std/src/mocks/MockERC721.sol": {
+      "lastModificationDate": 1700675500870,
+      "contentHash": "b6729ea581dcd9b4238eee9ca4d3bd89",
+      "sourceName": "lib/forge-std/src/mocks/MockERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "IERC721TokenReceiver": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "MockERC721.sol/IERC721TokenReceiver.json"
+        },
+        "MockERC721": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "MockERC721.sol/MockERC721.json"
+        }
+      }
+    },
+    "lib/forge-std/src/safeconsole.sol": {
+      "lastModificationDate": 1700675500871,
+      "contentHash": "ac3b1bf5a444db5db3656021830258a8",
+      "sourceName": "lib/forge-std/src/safeconsole.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "safeconsole": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "safeconsole.sol/safeconsole.json"
+        }
+      }
+    },
+    "lib/periphery-next/contracts/BaseHook.sol": {
+      "lastModificationDate": 1700675524777,
+      "contentHash": "6ab0b0a93c6351509ce355691e3d2d5a",
+      "sourceName": "lib/periphery-next/contracts/BaseHook.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.19",
+      "artifacts": {
+        "BaseHook": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "BaseHook.sol/BaseHook.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/forge-gas-snapshot/src/GasSnapshot.sol": {
+      "lastModificationDate": 1700677422357,
+      "contentHash": "b7908f95fbe8abc711421b24bc730f7a",
+      "sourceName": "lib/periphery-next/lib/forge-gas-snapshot/src/GasSnapshot.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "lib/periphery-next/lib/forge-gas-snapshot/src/utils/UintString.sol"
+      ],
+      "versionRequirement": "^0.8.15",
+      "artifacts": {
+        "GasSnapshot": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "GasSnapshot.sol/GasSnapshot.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/forge-gas-snapshot/src/utils/UintString.sol": {
+      "lastModificationDate": 1700677422357,
+      "contentHash": "4b41c38fc06dfc3143600ea3a3bb33e9",
+      "sourceName": "lib/periphery-next/lib/forge-gas-snapshot/src/utils/UintString.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.15",
+      "artifacts": {
+        "UintString": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "UintString.sol/UintString.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1700677423902,
+      "contentHash": "2d67be32f639a1f4f3fdb0a3f7f61602",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC1155Errors": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "draft-IERC6093.sol/IERC1155Errors.json"
+        },
+        "IERC20Errors": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "draft-IERC6093.sol/IERC20Errors.json"
+        },
+        "IERC721Errors": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "draft-IERC6093.sol/IERC721Errors.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol": {
+      "lastModificationDate": 1700677423921,
+      "contentHash": "839b6eecf9321754f00d4f67b9d4aed2",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "ERC1155": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "ERC1155.sol/ERC1155.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol": {
+      "lastModificationDate": 1700677423922,
+      "contentHash": "6ab9f00c6c5253d1501e8c50e8fdd57a",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC1155": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC1155.sol/IERC1155.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol": {
+      "lastModificationDate": 1700677423922,
+      "contentHash": "9220b7f38188963ea61bc789c8a2934c",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC1155Receiver": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC1155Receiver.sol/IERC1155Receiver.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
+      "lastModificationDate": 1700677423923,
+      "contentHash": "4d4640093c8ba2601e7d7a03ed9bc995",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC1155MetadataURI": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC1155MetadataURI.sol/IERC1155MetadataURI.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1700677423924,
+      "contentHash": "d35cda26d098ea22c6022461ec967af5",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "ERC20": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1700677423924,
+      "contentHash": "f9d429a75bcbb89457bbbcbe8af5544c",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC20": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1700677423927,
+      "contentHash": "56f1bd35ef71dceacdf28101e5f843aa",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC20Metadata": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC20Metadata.sol/IERC20Metadata.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol": {
+      "lastModificationDate": 1700677423932,
+      "contentHash": "bd4b7261a594fdef15c2edfd7e85e248",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Arrays": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Arrays.sol/Arrays.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1700677423932,
+      "contentHash": "09334082e90e487d918823170e4806b1",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Context": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Context.sol/Context.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1700677423934,
+      "contentHash": "c6efb1080c1744be0681b96e35a34ce0",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "StorageSlot": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "StorageSlot.sol/StorageSlot.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1700677423936,
+      "contentHash": "58383deda501d7fb5d15ba143f2b80b3",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "ERC165": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "ERC165.sol/ERC165.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1700677423936,
+      "contentHash": "5a21a24ec719b683e7faf6eae0db9181",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC165": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC165.sol/IERC165.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1700677423937,
+      "contentHash": "5eb91eea978bcb527346c11facbfadfb",
+      "sourceName": "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Math": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Math.sol/Math.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/solmate/src/utils/FixedPointMathLib.sol": {
+      "lastModificationDate": 1700677425492,
+      "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
+      "sourceName": "lib/periphery-next/lib/solmate/src/utils/FixedPointMathLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "FixedPointMathLib": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "FixedPointMathLib.sol/FixedPointMathLib.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/Fees.sol": {
+      "lastModificationDate": 1700677426024,
+      "contentHash": "9aca681a1dbd89db5ec9747162e49573",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/Fees.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/Owned.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHookFeeManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IProtocolFeeController.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.19",
+      "artifacts": {
+        "Fees": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Fees.sol/Fees.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/NoDelegateCall.sol": {
+      "lastModificationDate": 1700677426024,
+      "contentHash": "57ff3db69ae08626ac04bae4eb1c6c86",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/NoDelegateCall.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "NoDelegateCall": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "NoDelegateCall.sol/NoDelegateCall.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/Owned.sol": {
+      "lastModificationDate": 1700677426025,
+      "contentHash": "139538cc0901fd37b301ed4e1b60c111",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/Owned.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Owned": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Owned.sol/Owned.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/PoolManager.sol": {
+      "lastModificationDate": 1700677426025,
+      "contentHash": "311b2382cd6bd6d105ec10bec189af4a",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/PoolManager.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/periphery-next/lib/v4-core/contracts/Fees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/NoDelegateCall.sol",
+        "lib/periphery-next/lib/v4-core/contracts/Owned.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IDynamicFeeManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHookFeeManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IProtocolFeeController.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/LockDataLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "PoolManager": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "PoolManager.sol/PoolManager.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IDynamicFeeManager.sol": {
+      "lastModificationDate": 1700677426025,
+      "contentHash": "3ca1b9f8848c8bbf98b4533fe8f4dd0e",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IDynamicFeeManager.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IDynamicFeeManager": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IDynamicFeeManager.sol/IDynamicFeeManager.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol": {
+      "lastModificationDate": 1700677426026,
+      "contentHash": "2d353713cd976abfe804f51d7af2b4f6",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol"
+      ],
+      "versionRequirement": "^0.8.19",
+      "artifacts": {
+        "IFees": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IFees.sol/IFees.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IHookFeeManager.sol": {
+      "lastModificationDate": 1700677426026,
+      "contentHash": "840117b7a294664ee2962b741caaeeb4",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IHookFeeManager.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IHookFeeManager": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IHookFeeManager.sol/IHookFeeManager.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol": {
+      "lastModificationDate": 1700677426026,
+      "contentHash": "d8db0e186889bad622c3546b0ac8d656",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IHooks": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IHooks.sol/IHooks.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol": {
+      "lastModificationDate": 1700677426027,
+      "contentHash": "f696c71f9b4c5e18f967ff9e0987ac20",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IPoolManager": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IPoolManager.sol/IPoolManager.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/IProtocolFeeController.sol": {
+      "lastModificationDate": 1700677426027,
+      "contentHash": "6c459b5d2a9cf391cf5c01797f13d564",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/IProtocolFeeController.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IProtocolFeeController": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IProtocolFeeController.sol/IProtocolFeeController.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol": {
+      "lastModificationDate": 1700677426027,
+      "contentHash": "41511fa9ba1f92ce1d7563854a787880",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "ILockCallback": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "ILockCallback.sol/ILockCallback.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol": {
+      "lastModificationDate": 1700677426028,
+      "contentHash": "b1e20b81f1588bdc1857a7fc2bf2bedb",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "IERC20Minimal": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "IERC20Minimal.sol/IERC20Minimal.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol": {
+      "lastModificationDate": 1700677426028,
+      "contentHash": "e09992e68cbfee6676578b28a8eb6985",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "BitMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "BitMath.sol/BitMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol": {
+      "lastModificationDate": 1700677426028,
+      "contentHash": "047d67700705a49578fd0d3fe21cb8ca",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "FeeLibrary": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "FeeLibrary.sol/FeeLibrary.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol": {
+      "lastModificationDate": 1700677426028,
+      "contentHash": "81cee77f7d7c816ced348989df7371e9",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "FixedPoint128": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "FixedPoint128.sol/FixedPoint128.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol": {
+      "lastModificationDate": 1700677426028,
+      "contentHash": "1776e4be5f4f059e34830b5573a4f615",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "FixedPoint96": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "FixedPoint96.sol/FixedPoint96.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol": {
+      "lastModificationDate": 1700677426029,
+      "contentHash": "0d30542759085b67c00d7597cd7ca307",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "FullMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "FullMath.sol/FullMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol": {
+      "lastModificationDate": 1700677426029,
+      "contentHash": "dc3b2210909a0ab3abb6b38ea3a671b5",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Hooks": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Hooks.sol/Hooks.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/LockDataLibrary.sol": {
+      "lastModificationDate": 1700677426029,
+      "contentHash": "cf4071e7d4b4f423b725a25145f67557",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/LockDataLibrary.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "LockDataLibrary": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "LockDataLibrary.sol/LockDataLibrary.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol": {
+      "lastModificationDate": 1700677426030,
+      "contentHash": "e92d369e395ba6bceb998e65f5af099b",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Pool": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Pool.sol/Pool.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol": {
+      "lastModificationDate": 1700677426030,
+      "contentHash": "7ae41724bd36722a8e33625c969578d9",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "Position": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Position.sol/Position.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol": {
+      "lastModificationDate": 1700677426030,
+      "contentHash": "2c56bd3bb46889b72036eb7cf2f7c9d1",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "SafeCast": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "SafeCast.sol/SafeCast.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol": {
+      "lastModificationDate": 1700677426031,
+      "contentHash": "ea5ac26ec4942f280cfa1de2fc368c14",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "SqrtPriceMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "SqrtPriceMath.sol/SqrtPriceMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol": {
+      "lastModificationDate": 1700677426031,
+      "contentHash": "0c1cae3adbdc65101517bad68a9d923f",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "SwapMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "SwapMath.sol/SwapMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol": {
+      "lastModificationDate": 1700677426031,
+      "contentHash": "6cd2e3876c5c43f9fd933bfaf5c7c233",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "TickBitmap": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "TickBitmap.sol/TickBitmap.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol": {
+      "lastModificationDate": 1700677426031,
+      "contentHash": "a5764c6a1787b73b1bde7b9884e45822",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "TickMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "TickMath.sol/TickMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol": {
+      "lastModificationDate": 1700677426032,
+      "contentHash": "2fd744d4d8034e828e43d4e7cd79485d",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "UnsafeMath": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "UnsafeMath.sol/UnsafeMath.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/test/PoolModifyPositionTest.sol": {
+      "lastModificationDate": 1700677426034,
+      "contentHash": "dc5a1f2191a258c800fb3c22c69d57ba",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/test/PoolModifyPositionTest.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "PoolModifyPositionTest": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "PoolModifyPositionTest.sol/PoolModifyPositionTest.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/test/PoolSwapTest.sol": {
+      "lastModificationDate": 1701113088695,
+      "contentHash": "48b6ae5ec089f40a4ee6067acc2cd44b",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/test/PoolSwapTest.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "PoolSwapTest": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "PoolSwapTest.sol/PoolSwapTest.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/test/TestERC20.sol": {
+      "lastModificationDate": 1700677426036,
+      "contentHash": "cd589c91f8da7155b8936bf287333cb8",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/test/TestERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "TestERC20": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "TestERC20.sol/TestERC20.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol": {
+      "lastModificationDate": 1700677426037,
+      "contentHash": "a9a7b131b187c96ba149b6c874288a6c",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "BalanceDeltaLibrary": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "BalanceDelta.sol/BalanceDeltaLibrary.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol": {
+      "lastModificationDate": 1700677426038,
+      "contentHash": "f113b3502d3329534a72adedf7d6755e",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "CurrencyLibrary": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Currency.sol/CurrencyLibrary.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol": {
+      "lastModificationDate": 1700677426038,
+      "contentHash": "3f5290aa4638a3e7a85e5bf6ff049590",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "PoolIdLibrary": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "PoolId.sol/PoolIdLibrary.json"
+        }
+      }
+    },
+    "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol": {
+      "lastModificationDate": 1700677426038,
+      "contentHash": "afb69a9ea979a53f0c2b85a3d86adf81",
+      "sourceName": "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.19",
+      "artifacts": {
+        "PoolKey": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "PoolKey.sol/PoolKey.json"
+        }
+      }
+    },
+    "script/Counter.s.sol": {
+      "lastModificationDate": 1700675500017,
+      "contentHash": "7539680fbd3ad49c6632713cc2bb6bf6",
+      "sourceName": "script/Counter.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "CounterScript": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Counter.s.sol/CounterScript.json"
+        }
+      }
+    },
+    "src/Counter.sol": {
+      "lastModificationDate": 1700675500016,
+      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
+      "sourceName": "src/Counter.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Counter": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Counter.sol/Counter.json"
+        }
+      }
+    },
+    "src/LimitOrderHook.sol": {
+      "lastModificationDate": 1701189955711,
+      "contentHash": "a0356d2314bd4f919a7c600120ed33f9",
+      "sourceName": "src/LimitOrderHook.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/abdk-libraries-solidity/ABDKMath64x64.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/periphery-next/contracts/BaseHook.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/periphery-next/lib/solmate/src/utils/FixedPointMathLib.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol"
+      ],
+      "versionRequirement": "^0.8.21",
+      "artifacts": {
+        "LimitOrderHook": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "LimitOrderHook.sol/LimitOrderHook.json"
+        }
+      }
+    },
+    "src/LimitOrderStub.sol": {
+      "lastModificationDate": 1700681872753,
+      "contentHash": "feb1f4622422de4fd82a3eaea9b6f04b",
+      "sourceName": "src/LimitOrderStub.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/abdk-libraries-solidity/ABDKMath64x64.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/periphery-next/contracts/BaseHook.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/periphery-next/lib/solmate/src/utils/FixedPointMathLib.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol",
+        "src/LimitOrderHook.sol"
+      ],
+      "versionRequirement": "^0.8.21",
+      "artifacts": {
+        "LimitOrderStub": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "LimitOrderStub.sol/LimitOrderStub.json"
+        }
+      }
+    },
+    "test/Counter.t.sol": {
+      "lastModificationDate": 1700685050783,
+      "contentHash": "0cd69eed3e282a551cab435483e6fab6",
+      "sourceName": "test/Counter.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": null,
+      "artifacts": {
+        "Counter.t": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "Counter.t.sol/Counter.t.json"
+        }
+      }
+    },
+    "test/LimitOrderHook.t.sol": {
+      "lastModificationDate": 1701193777547,
+      "contentHash": "a594ddf1202d6a2608b0b8ba1ab386af",
+      "sourceName": "test/LimitOrderHook.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "viaIR": true,
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/abdk-libraries-solidity/ABDKMath64x64.sol",
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/mocks/MockERC20.sol",
+        "lib/forge-std/src/mocks/MockERC721.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "lib/periphery-next/contracts/BaseHook.sol",
+        "lib/periphery-next/lib/forge-gas-snapshot/src/GasSnapshot.sol",
+        "lib/periphery-next/lib/forge-gas-snapshot/src/utils/UintString.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/periphery-next/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/periphery-next/lib/solmate/src/utils/FixedPointMathLib.sol",
+        "lib/periphery-next/lib/v4-core/contracts/Fees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/NoDelegateCall.sol",
+        "lib/periphery-next/lib/v4-core/contracts/Owned.sol",
+        "lib/periphery-next/lib/v4-core/contracts/PoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IDynamicFeeManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IFees.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHookFeeManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IHooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IPoolManager.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/IProtocolFeeController.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/callback/ILockCallback.sol",
+        "lib/periphery-next/lib/v4-core/contracts/interfaces/external/IERC20Minimal.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/BitMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FeeLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint128.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FixedPoint96.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/FullMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Hooks.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/LockDataLibrary.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Pool.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/Position.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SafeCast.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SqrtPriceMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/SwapMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickBitmap.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/TickMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/libraries/UnsafeMath.sol",
+        "lib/periphery-next/lib/v4-core/contracts/test/PoolModifyPositionTest.sol",
+        "lib/periphery-next/lib/v4-core/contracts/test/PoolSwapTest.sol",
+        "lib/periphery-next/lib/v4-core/contracts/test/TestERC20.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/BalanceDelta.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/Currency.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolId.sol",
+        "lib/periphery-next/lib/v4-core/contracts/types/PoolKey.sol",
+        "src/LimitOrderHook.sol",
+        "src/LimitOrderStub.sol"
+      ],
+      "versionRequirement": "^0.8.21",
+      "artifacts": {
+        "LimitOrderHookTest": {
+          "0.8.23+commit.f704f362.Darwin.appleclang": "LimitOrderHook.t.sol/LimitOrderHookTest.json"
+        }
+      }
+    }
+  }
+}

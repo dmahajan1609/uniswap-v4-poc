@@ -7,7 +7,7 @@ import {Hooks} from "v4-core/libraries/Hooks.sol";
 
 contract LimitOrderStub is LimitOrderHook {
     constructor(IPoolManager _poolManager, LimitOrderHook addressToEtch)
-        LimitOrderHook(_poolmanager, ""){}
+        LimitOrderHook(_poolManager, ""){}
 
         // Note: 
         //The way Uniswap v4 is designed, it requires the contract address of Hook contracts to be a very specific pattern. In fact, it requires that certain bits in the address are 0 or 1 depending on whether that contract implements a specific Hook or not. When Uniswap is deployed to a network, this will likely happen through the use of CREATE2 hook deployments where Hooks will be deployed to a pre-determined address to make sure their addresses are valid and follow that pattern.

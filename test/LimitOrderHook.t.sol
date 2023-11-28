@@ -32,7 +32,7 @@ import {LimitOrderStub} from "../src/LimitOrderStub.sol";
 
 contract LimitOrderHookTest is Test, GasSnapshot {
 
-    using PoolIdLibrary for IPoolManager.PoolKey;
+    using PoolIdLibrary for PoolKey;
 
     using CurrencyLibrary for Currency;
 
@@ -66,9 +66,10 @@ contract LimitOrderHookTest is Test, GasSnapshot {
     uint160 constant SQRT_RATIO_1_1 = 79228162514264337593543950336;
 
     // Helper function
-    function deployERC20Tokens() private {
-        TestERC20 tokenA = new TestERC20(2**128);
-        TestERC20 tokenB = new TestERC20(2**128);
+    function _deployERC20Tokens() private {
+        console.log("Deploy ERC20 token0 and token1 locally");
+        TestERC20 tokenA = new TestERC20(1000);
+        TestERC20 tokenB = new TestERC20(1000);
 
         // Token 0 and Token 1 are assigned in a pool based on
         // the address of the token
@@ -101,9 +102,10 @@ contract LimitOrderHookTest is Test, GasSnapshot {
     }
 
     function _initializePool() private {
+        console.log("Initializing Pool");
         // Deploy the test-versions of modifyPositionRouter and swapRouter
         modifyPositionRouter = new PoolModifyPositionTest(IPoolManager(address(poolManager)));
-        swapROuter = new PoolSwapTest(IPoolManager(address(poolManager)));
+        swapRouter = new PoolSwapTest(IPoolManager(address(poolManager)));
 
         // specify poolkey and poolid for the pool
         // struct PoolKey {
@@ -124,13 +126,19 @@ contract LimitOrderHookTest is Test, GasSnapshot {
         poolId = poolKey.toId();
 
         // Initialize the new pool with initial price ratio = 1
-        poolManager.initialize(poolKey, SQRT_RATIO_1_1);
+        poolManager.initialize(poolKey, SQRT_RATIO_1_1, "");
+        // console.log("Initializing a Pool with id:");
+        // console.logBytes32(bytes(poolKey.toId()));
+
     }
 
     function _addLiquidityToPool() private {
+        console.log("Adding liquidity to the Pool at various ticks for token0 and token1");
         // Mint a lot of tokens to ourselves
         token0.mint(address(this), 100 ether);
+        console.log("token0 balance after minting ourselves some tokens", token0.balanceOf(address(this)) / 10** 18);
         token1.mint(address(this), 100 ether);
+        console.log("token1 balance after minting ourselves some tokens", token1.balanceOf(address(this)) / 10**18);
 
         // Approve the modifyPositionRouter to spend your tokens
         token0.approve(address(modifyPositionRouter), 100 ether);
@@ -142,26 +150,13 @@ contract LimitOrderHookTest is Test, GasSnapshot {
         // Then, from minimum possible tick to maximum possible tick
 
         // Add liquidity from -60 to +60
-        modifyPositionRouter.modifyPosition(
-            poolKey,
-            IPoolManager.ModifyPositionParams(-60, 60, 10 ether)
-        );
+        modifyPositionRouter.modifyPosition(poolKey, IPoolManager.ModifyPositionParams(-60, 60, 10 ether), "");
 
         // Add liquidity from -120 to +120
-        modifyPositionRouter.modifyPosition(
-            poolKey,
-            IPoolManager.ModifyPositionParams(-120, 120, 10 ether)
-        );
+        modifyPositionRouter.modifyPosition(poolKey, IPoolManager.ModifyPositionParams(-120, 120, 10 ether), "");
 
         // Add liquidity from minimum tick to maximum tick
-        modifyPositionRouter.modifyPosition(
-            poolKey,
-            IPoolManager.ModifyPositionParams(
-                TickMath.minUsableTick(60),
-                TickMath.maxUsableTick(60),
-                50 ether
-            )
-        );
+        modifyPositionRouter.modifyPosition(poolKey,IPoolManager.ModifyPositionParams(TickMath.minUsableTick(60),TickMath.maxUsableTick(60),50 ether), "");
 
         // Approve the tokens for swapping through the swapRouter
         token0.approve(address(swapRouter), 100 ether);
@@ -231,26 +226,203 @@ contract LimitOrderHookTest is Test, GasSnapshot {
         uint256 afterBalance = token0.balanceOf(address(this));
         console.log("Token 0 balance after placing order is %s",afterBalance);
 
+        uint256 balance = beforeBalance - afterBalance;
+        uint256 realBalance = balance / 10 ** 18;
+        console.log("Amount of token 0 order placed is %s",realBalance);
 
         // Since we deployed the pool contract with tick spacing = 60
         // i.e. the tick can only be a multiple of 60
         // and initially the tick is 0
-        // the tickLower should be 60 since we placed an order at tick 100
+        // the tickLower should be 60 since we placed an order at tick 100 going by the math
         assertEq(tickLower, 60);
 
         // Ensure that our balance was reduced by `amount` tokens
-        assertEq(originalBalance - newBalance, amount);
+        assertEq(balance, amount);
 
         // Check the balance of ERC-1155 tokens we received
-        uint256 tokenId = hook.getTokenId(poolKey, tickLower, zeroForOne);
+        uint256 tokenId = hook.getTokenId(poolKey, tickLower, ZeroForOne);
         uint256 tokenBalance = hook.balanceOf(address(this), tokenId);
 
         // Ensure that we were, in fact, given ERC-1155 tokens for the order
         // equal to the `amount` of token0 tokens we placed the order for
         assertTrue(tokenId != 0);
         assertEq(tokenBalance, amount);
-
-
     }
 
+    function test_cancelOrder() public {
+        // Lets place a ZeroForOne order at tick 100
+
+        int24 tick = 100;
+        uint256 amount = 10 ether;
+        bool ZeroForOne = true;
+
+        // Get original balance of token0
+        uint256 beforeBalance = token0.balanceOf(address(this));
+        console.log("Token 0 balance before placing order is %s",beforeBalance);
+
+        //First place order
+        token0.approve(address(hook), amount);
+        int24 tickLower = hook.placeOrder(poolKey, tick, ZeroForOne, amount);
+
+        // Get new balance of token0
+        uint256 afterBalance = token0.balanceOf(address(this));
+        console.log("Token 0 balance after placing order is %s",afterBalance);
+
+        uint256 balance =  beforeBalance - afterBalance;
+        uint256 realBalance = balance / 10 ** 18;
+        console.log("Amount of token 0 order placed is %s",realBalance);
+
+        // Since we deployed the pool contract with tick spacing = 60
+        // i.e. the tick can only be a multiple of 60
+        // and initially the tick is 0
+        // the tickLower should be 60 since we placed an order at tick 100 going by the math
+        assertEq(tickLower, 60);
+        // Ensure that our balance was reduced by `amount` tokens
+        assertEq(balance, amount);
+
+        // Check the balance of ERC-1155 tokens we received
+        uint256 tokenId = hook.getTokenId(poolKey, tickLower, ZeroForOne);
+        uint256 tokenBalance = hook.balanceOf(address(this), tokenId);
+        assertEq(tokenBalance, amount);
+        console.log("Amount of ERC1155 received after order placed is %s",tokenBalance / 10 ** 18);
+
+        console.log("Now initiating order cancellation......");
+
+        // Now cancel order
+        hook.cancelOrder(poolKey, tick, ZeroForOne);
+
+        // Check that we received our token0 tokens back, and no longer own any ERC-1155 tokens
+        uint256 finalBalance = token0.balanceOf(address(this));
+        console.log("Token 0 balance after cancelling placed order is %s", finalBalance);
+        assertEq(finalBalance, beforeBalance);
+
+        tokenBalance = hook.balanceOf(address(this), tokenId);
+        console.log("Amount of ERC1155 remianing after being burned is %s",tokenBalance);
+
+        // Ensure that we were, in fact, given ERC-1155 tokens for the order
+        // equal to the `amount` of token0 tokens we placed the order for
+        assertEq(tokenBalance, 0);
+    }
+
+    function test_limitOrderExecution_zeroForOne() public {
+        int24 tick = 100;
+        uint256 amount = 10 ether;
+        bool zeroForOne = true;
+        // Place our order at tick 100 for 10e18 token0 tokens
+        uint256 token0BalanceBeforeSwap = token0.balanceOf(address(this));
+        console.log("Token0 balance in user wallet BEFORE placing limit order", token0BalanceBeforeSwap / 10** 18);
+        uint256 token1BalanceBeforeSwap = token1.balanceOf(address(this));
+        console.log("Token1 balance in user wallet BEFORE placing limit order", token1BalanceBeforeSwap / 10** 18);
+        token0.approve(address(hook), amount);
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Starting to place a limit order....");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        int24 tickLower = hook.placeOrder(poolKey, tick, zeroForOne, amount);
+
+        // Do a separate manual swap from oneForZero to make tick go up
+        // Sell 1e18 token1 tokens for token0 tokens
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Starting a manual swap in a one to zero direction in order to trigger a limit order in zero to one direction....:");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        IPoolManager.SwapParams memory params = IPoolManager.SwapParams({
+            zeroForOne: !zeroForOne,
+            amountSpecified: 1 ether,
+            sqrtPriceLimitX96: TickMath.MAX_SQRT_RATIO - 1
+        });
+
+        PoolSwapTest.TestSettings memory testSettings = PoolSwapTest
+            .TestSettings({withdrawTokens: true, settleUsingTransfer: true});
+
+        swapRouter.swap(poolKey, params, testSettings, "");
+        console.log("Token0 balance in user wallet AFTER limit order swap", token0.balanceOf(address(this)) / 10**18);
+
+
+        // Check that the order has been executed
+        int256 tokensLeftToSell = hook.takeProfitPositions(
+            poolId,
+            tick,
+            zeroForOne
+        );
+        assertEq(tokensLeftToSell, 0);
+
+        // Check that the hook contract has the expected number of token1 tokens ready to redeem
+        uint256 tokenId = hook.getTokenId(poolKey, tickLower, zeroForOne);
+        uint256 claimableTokens = hook.tokenIdClaimable(tokenId);
+        console.log("Claimable token1 tokens:", claimableTokens / 10**18);
+        uint256 hookContractToken1Balance = token1.balanceOf(address(hook));
+        console.log("hookContractToken1Balance:", hookContractToken1Balance / 10**18);
+        assertEq(claimableTokens, hookContractToken1Balance);
+
+        // Ensure we can redeem the token1 tokens
+        uint256 originalToken1Balance = token1.balanceOf(address(this));
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Invoke redeem function to swap received ERC1155 tokens for bought tokens");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        hook.redeem(tokenId, amount, address(this));
+        uint256 newToken1Balance = token1.balanceOf(address(this));
+        console.log("Token1 balance in user wallet AFTER redeeming from hook contract", newToken1Balance / 10**18);
+        assertEq(newToken1Balance - originalToken1Balance, claimableTokens);
+    }
+
+    function test_limitOrderExecution_oneForZero() public {
+        int24 tick = -100;
+        uint256 amount = 10 ether;
+        bool zeroForOne = false;
+        // Place our order at tick 100 for 10e18 token0 tokens
+        uint256 token0BalanceBeforeSwap = token0.balanceOf(address(this));
+        console.log("Token0 balance in user wallet BEFORE placing limit order", token0BalanceBeforeSwap / 10** 18);
+        uint256 token1BalanceBeforeSwap = token1.balanceOf(address(this));
+        console.log("Token1 balance in user wallet BEFORE placing limit order", token1BalanceBeforeSwap / 10** 18);
+
+
+        token1.approve(address(hook), amount);
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Starting to place a limit order....");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        int24 tickLower = hook.placeOrder(poolKey, tick, zeroForOne, amount);
+
+        // Do a separate swap from zeroForOne to make tick go down
+       // Sell 1e18 token0 tokens for token1 tokens
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Starting a manual swap in a zero to one direction in order to trigger a limit order in one to zero direction....:");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        IPoolManager.SwapParams memory params = IPoolManager.SwapParams({
+            zeroForOne: !zeroForOne,
+            amountSpecified: 1 ether,
+            sqrtPriceLimitX96: TickMath.MIN_SQRT_RATIO + 1
+        });
+
+        PoolSwapTest.TestSettings memory testSettings = PoolSwapTest
+            .TestSettings({withdrawTokens: true, settleUsingTransfer: true});
+
+        swapRouter.swap(poolKey, params, testSettings, "");
+        console.log("Token1 balance in user wallet AFTER limit order swap", token1.balanceOf(address(this)) / 10**18);
+
+
+        // Check that the order has been executed
+        int256 tokensLeftToSell = hook.takeProfitPositions(
+            poolId,
+            tick,
+            zeroForOne
+        );
+        assertEq(tokensLeftToSell, 0);
+
+        // Check that the hook contract has the expected number of token0 tokens ready to redeem
+        uint256 tokenId = hook.getTokenId(poolKey, tickLower, zeroForOne);
+        uint256 claimableTokens = hook.tokenIdClaimable(tokenId);
+        console.log("Claimable token0 tokens:", claimableTokens / 10**18);
+        uint256 hookContractToken1Balance = token0.balanceOf(address(hook));
+        console.log("hookContractToken1Balance:", hookContractToken1Balance / 10**18);
+        assertEq(claimableTokens, hookContractToken1Balance);
+
+        // Ensure we can redeem the token1 tokens
+        uint256 originalToken0Balance = token0.balanceOf(address(this));
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        console.log("Invoke redeem function to swap received ERC1155 tokens for bought tokens");
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        hook.redeem(tokenId, amount, address(this));
+        uint256 newToken0Balance = token0.balanceOf(address(this));
+        console.log("Token0 balance in user wallet AFTER redeeming from hook contract", newToken0Balance / 10**18);
+        assertEq(newToken0Balance - originalToken0Balance, claimableTokens);
+    }
 }
